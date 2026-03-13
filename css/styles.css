@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/*------------------------------- Aspecto general----------------------------*/
+:root{
+    /* colores de la pagina */
+    --color-primario: #1E90FF;
+    --color-secundario: #FF6347;
+    --color-fondo: #F5F5F5;
+    --color-texto: #333333;
+    --color-primario-hover: #1C86EE;
+    --color-secundario-hover: #FF4500;
+    /* ---------------------------------------------------- */
+    /* texto de la pagina */
+    /* fuente de Google en el <link> de index.html: Lexend + Rubik */
+    --texto-titulo: 'Lexend', sans-serif;
+    --texto-cuerpo: 'Rubik', sans-serif;
+    --grosor-titulo: 700;
+    --grosor-subtitulo: 500;
+    --grosor-encabezado: 700;
+    --grosor-subencabezado: 500;
+    --grosor-menu: 600;
+    --grosor-cuerpo: 400;
+    --grosor-boton: 600;
+    --tamano-titulo: 2.5rem;
+    --tamano-subtitulo: 1.5rem;
+    --tamano-encabezado: 1.25rem;
+    --tamano-subencabezado: 1rem;
+    --tamano-menu: 1rem;
+    --tamano-cuerpo: 0.8rem;
+    /* --------------------------------------------------- */
+    /* contornos de los botones */
+    --tamano-boton: 1rem;
+    --radio-boton: 5px;
+    --color-boton: var(--color-primario);
+    --color-texto-boton: #fff;
+}
+
+body{
+    font-family: var(--texto-cuerpo);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+h1{
+    font-family: var(--texto-titulo);
+    font-weight: var(--grosor-titulo);
+    font-size: var(--tamano-titulo);
+}   
+h2{
+    font-family: var(--texto-titulo);
+    font-weight: var(--grosor-subtitulo);
+    font-size: var(--tamano-subtitulo);
+}
+h3{
+    font-family: var(--texto-titulo);
+    font-weight: var(--grosor-encabezado);
+    font-size: var(--tamano-encabezado);
+}
+h4{
+    font-family: var(--texto-titulo);
+    font-weight: var(--grosor-subencabezado);
+    font-size: var(--tamano-subencabezado);
+}
+nav a{
+    font-family: var(--texto-titulo);
+    font-weight: var(--grosor-menu);
+    font-size: var(--tamano-menu);
+}
+p{
+    font-family: var(--texto-cuerpo);
+    font-weight: var(--grosor-cuerpo);
+    font-size: var(--tamano-cuerpo);
+}
+
+button{
+    font-family: var(--texto-cuerpo);
+    font-weight: var(--grosor-boton);
+    font-size: var(--tamano-boton);
+    background-color: var(--color-boton);
+    color: var(--color-texto-boton);
+    border-radius: var(--radio-boton);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*-------------------------------fin de aspecto general----------------------------*/
+
+/*-------------------------------Header----------------------------*/
