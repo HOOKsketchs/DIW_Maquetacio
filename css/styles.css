@@ -7,10 +7,11 @@
 /*------------------------------- Aspecto general----------------------------*/
 :root{
     /* colores de la pagina */
-    --color-primario: #1E90FF;
+    --color-primario: #111111;
     --color-secundario: #FF6347;
     --color-fondo: #F5F5F5;
     --color-texto: #333333;
+    --color-texto-men:;
     --color-primario-hover: #1C86EE;
     --color-secundario-hover: #FF4500;
     /* ---------------------------------------------------- */
@@ -29,7 +30,7 @@
     --tamano-subtitulo: 1.5rem;
     --tamano-encabezado: 1.25rem;
     --tamano-subencabezado: 1rem;
-    --tamano-menu: 1rem;
+    --tamano-menu: 0.875rem;
     --tamano-cuerpo: 0.8rem;
     /* --------------------------------------------------- */
     /* contornos de los botones */
@@ -87,7 +88,70 @@ button{
     cursor: pointer;
 }
 
+
+
+
+
 /*-------------------------------fin de aspecto general----------------------------*/
 
 /*-------------------------------Header----------------------------*/
+
+header{
+    background-color: pink;
+    color: #fff;
+    /* padding: 20px; */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ----------------------------------fin header------------------ */
+/* ----------------------------------menu------------------ */
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    background-color: var(--color-primario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px; ;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ----------------------------------fin menu------------------ */
+
+.hero-content{
+    background-image: url('../IMG/Hero_IMG.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-content{
+
+}
+
+.hero-text{
+    text-align: center; 
+    color: var(--color-texto-boton);
+}
+
+
+
+
 
