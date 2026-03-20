@@ -31,7 +31,7 @@
     --tamano-encabezado: 1.25rem;
     --tamano-subencabezado: 1rem;
     --tamano-menu: 0.875rem;
-    --tamano-cuerpo: 0.8rem;
+    --tamano-cuerpo: 1rem;
     /* --------------------------------------------------- */
     /* contornos de los botones */
     --tamano-boton: 1rem;
@@ -119,6 +119,7 @@ nav{
     padding: 20px; ;
 }
 
+
 ul{
     list-style: none;
     display: flex;
@@ -128,6 +129,10 @@ ul{
 nav a{
     color: #fff;
     text-decoration: none;
+}
+
+nav a.activado{
+    text-decoration: underline;
 }
 
 /* ----------------------------------fin menu------------------ */
@@ -140,18 +145,60 @@ nav a{
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-.hero-content{
-
+    justify-content: start;
+    padding: 20px;
 }
 
-.hero-text{
-    text-align: center; 
+.hero-text{ 
+    background-color: var(--color-secundario);
+    border-radius: 20px;
     color: var(--color-texto-boton);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 40px;
 }
 
+section{
+    padding: 30px 20px;
+    box-sizing: border-box;
+     /* background-color: blueviolet; */
+}
 
+.col2570{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    /* background-color: aqua; */
+    /* border: solid 1px black; */
+    box-sizing: border-box;
+}
 
+.col2570 h2{
+    width: 85%;
+    /* background-color: orange; */
+}
 
+.contimg{
+    width: 20%;
+    /* background-color: red; */
+}
 
+.conttexto{
+    width: 65%;
+    padding: 20px;
+    box-sizing: border-box;
+    /* background-color: yellow; */
+}
+
+.contimg img{
+    width: 100%;
+    /* background-color: green; */
+    /* border-radius: 10px; */
+}
