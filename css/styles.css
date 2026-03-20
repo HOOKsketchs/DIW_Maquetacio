@@ -202,3 +202,29 @@ section{
     /* background-color: green; */
     /* border-radius: 10px; */
 }
+
+
+/* ----------------------Carta de Productos ------------------- */
+.CartaGrid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: violet;
+    box-sizing: border-box;
+    
+}
+
+
+
+.CartaGrid:nth-child(2){
+    grid-template-columns: 6fr;
+    background-color: red;
+}
+
+.CartaGrid:nth-child(3){
+    grid-template-columns: 6fr;
+    background-color: yellow;
+}
+
+/* ------------------------fin Carta de Productos ------------------- */
