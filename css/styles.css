@@ -11,7 +11,7 @@
     --color-secundario: #FF6347;
     --color-fondo: #F5F5F5;
     --color-texto: #333333;
-    --color-texto-men:;
+    --color-texto-white: #FFFFFF;
     --color-primario-hover: #1C86EE;
     --color-secundario-hover: #FF4500;
     /* ---------------------------------------------------- */
@@ -27,7 +27,7 @@
     --grosor-cuerpo: 400;
     --grosor-boton: 600;
     --tamano-titulo: 2.5rem;
-    --tamano-subtitulo: 1.5rem;
+    --tamano-subtitulo: 2rem;
     --tamano-encabezado: 1.25rem;
     --tamano-subencabezado: 1rem;
     --tamano-menu: 0.875rem;
@@ -38,6 +38,8 @@
     --radio-boton: 5px;
     --color-boton: var(--color-primario);
     --color-texto-boton: #fff;
+    /* detalles de sombra */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 body{
@@ -167,6 +169,18 @@ section{
      /* background-color: blueviolet; */
 }
 
+section > h2{
+    /* background-color: #1C86EE; */
+    width: auto;
+    text-align: left;
+    padding: 20px 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-primario);
+    box-sizing: border-box;
+}
+
 .col2570{
     width: auto;
     display: flex;
@@ -180,18 +194,14 @@ section{
     box-sizing: border-box;
 }
 
-.col2570 h2{
-    width: 85%;
-    /* background-color: orange; */
-}
 
 .contimg{
-    width: 20%;
+    width: 27%;
     /* background-color: red; */
 }
 
 .conttexto{
-    width: 65%;
+    width: 70%;
     padding: 20px;
     box-sizing: border-box;
     /* background-color: yellow; */
@@ -199,6 +209,8 @@ section{
 
 .contimg img{
     width: 100%;
+    border-radius: 30px;
+    box-shadow: var(--box-shadow);
     /* background-color: green; */
     /* border-radius: 10px; */
 }
@@ -220,22 +232,29 @@ section{
 
 .CartaGrid .el:nth-child(1){
     grid-area: Carta_item1;
-    background-color: red;
+    background-color: var(--color-secundario);
+    color: var(--color-texto-white);
+    /* background-color: red; */
     text-align: center;
+    padding: 10px 15px;
+    border-radius: 30px;
 }
 
 .CartaGrid .el:nth-child(2){
     grid-area: Carta_item2;
-    background-color: blue;
+    border: solid 2px var(--color-secundario);
+    border-radius: 30px;
+    color: var(--color-secundario);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: var(--box-shadow);
 }
 
 .CartaGrid .el:nth-child(3){
     grid-area: Carta_item3;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
@@ -248,39 +267,42 @@ section{
 
 .CartaGrid .el:nth-child(3) .SubEl:nth-child(1){
     grid-area:subel1;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 .CartaGrid .el:nth-child(3) .SubEl:nth-child(2){
     grid-area:subel2;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 .CartaGrid .el:nth-child(3) .SubEl:nth-child(3){
     grid-area:subel3;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 .CartaGrid .el:nth-child(3) .SubEl:nth-child(4){
     grid-area:subel4;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 
 .CartaGrid .el:nth-child(4){
     grid-area: Carta_item4;
-    background-color: cyan;
+    border: solid 2px var(--color-secundario);
+    border-radius: 30px;
+    color: var(--color-secundario);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: var(--box-shadow);
 }
 
 
 
 .CartaGrid .el:nth-child(5){
     grid-area: Carta_item5;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
@@ -288,33 +310,173 @@ section{
                         "subel5b subel5b"
                         "subel5c subel5d";
     gap: 15px;
-    padding: 15px;
+    padding: 1px;
 }
 
 .CartaGrid .el:nth-child(5) .SubEl:nth-child(1){
     grid-area: subel5a;
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
 }
 
 .CartaGrid .el:nth-child(5) .SubEl:nth-child(2){
     grid-area: subel5b;
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
 }
 
 .CartaGrid .el:nth-child(5) .SubEl:nth-child(3){
     grid-area: subel5c;
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
 }
 
 .CartaGrid .el:nth-child(5) .SubEl:nth-child(4){
     grid-area: subel5d;
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
 }
 
 .Contimg2{
     width: 400px;
-    height: 200px;
-    background-color: hotpink;
+    height: auto;
+    /* background-color: hotpink; */
+}
+
+.Contimg2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
 }
 
 /* ------------------------fin Carta de Productos ------------------- */
+
+/* ------------------------ Galería de Imágenes ------------------- */
+.GaleriaFlex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.Gel{
+    width: 22%;
+    border-radius: 20px;
+    height: auto;
+    /* background-color: lightgreen; */
+}
+
+.Gel > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.Gel > img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/* ------------------------ Fin Galería de Imágenes ------------------- */
+
+/* ------------------------ Formulario de Reservas ------------------- */
+.Formulario{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #1C86EE; */
+    box-sizing: border-box;
+}
+
+.col50{
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* background-color: #FF6347; */
+    padding: 10px;
+    box-sizing: border-box;
+}
+  
+.col100{
+    gap: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #FF6347; */
+    /* border: 1px solid #ccc; */
+    padding: 15px;
+    /* box-sizing: border-box; */
+}
+
+input, select, textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    margin-left: auto;
+    width: auto;
+    max-width: 200px;
+}
+
+/* ------------------------ Fin Formulario de Reservas ------------------- */
+
+/* ------------------------ Footer ------------------- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-right {
+    font-size: 2rem;
+}
+/* ------------------------ Fin Footer ------------------- */
+
+/* ------------------------ Botón Flotante ------------------- */
+.boton-flotante {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--color-secundario);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: var(--texto-cuerpo);
+    font-weight: var(--grosor-boton);
+}
+/* ------------------------ Fin Botón Flotante ------------------- */
