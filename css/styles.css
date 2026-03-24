@@ -144,6 +144,12 @@ nav a.activado{
     text-decoration: underline;
 }
 
+nav a:hover{
+    color: var(--color-secundario-hover);
+    text-decoration: underline;
+
+}
+
 /* ----------------------------------fin menu------------------ */
 
 .hero-content{
