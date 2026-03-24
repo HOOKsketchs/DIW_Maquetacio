@@ -112,7 +112,7 @@ header{
 nav{
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     gap: 20px;
     background-color: var(--color-primario);
     position: sticky;
@@ -121,10 +121,17 @@ nav{
     padding: 20px; ;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 
 ul{
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
