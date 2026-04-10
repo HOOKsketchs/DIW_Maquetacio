@@ -46,6 +46,7 @@ body{
     font-family: var(--texto-cuerpo);
     background-color: var(--color-fondo);
     color: var(--color-texto);
+    padding-top: 80px; /* Espacio para el nav fixed */
 }
 
 h1{
@@ -115,11 +116,15 @@ nav{
     justify-content: space-between;
     gap: 20px;
     background-color: var(--color-primario);
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     padding: 20px; ;
 }
+
+/* estoy usando el fixed por que es el unico que funciona
+el stiky si funciona pero se limita su scroll 
+a el heroimg si ha manera me lo pueden explicar */
 
 .logo{
     display: flex;
@@ -262,12 +267,14 @@ section > h2{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 10px 15px;
     box-shadow: var(--box-shadow);
 }
 
 .CartaGrid .el:nth-child(3){
     grid-area: Carta_item3;
     /* background-color: blueviolet; */
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
@@ -275,7 +282,10 @@ section > h2{
                         "subel2 subel2"
                         "subel3 subel4";
     gap: 15px;
-    padding: 15px;
+    padding: 20px;
+    border: 2px solid var(--color-secundario);
+    border-radius: 30px;
+        box-shadow: var(--box-shadow);
 }
 
 .CartaGrid .el:nth-child(3) .SubEl:nth-child(1){
@@ -323,7 +333,11 @@ section > h2{
                         "subel5b subel5b"
                         "subel5c subel5d";
     gap: 15px;
-    padding: 1px;
+    padding: 20px;
+    border: 2px solid var(--color-secundario);
+    border-radius: 30px;
+        box-shadow: var(--box-shadow);
+
 }
 
 .CartaGrid .el:nth-child(5) .SubEl:nth-child(1){
@@ -347,8 +361,10 @@ section > h2{
 }
 
 .Contimg2{
-    width: 400px;
-    height: auto;
+    width: 100%;  /* Cambia de 400px a 100% para que se ajuste al grid */
+    height: auto;  
+    position: relative;
+    overflow: hidden;
     /* background-color: hotpink; */
 }
 
@@ -357,7 +373,24 @@ section > h2{
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--box-shadow); */
+  
+}
+
+.overlaygrid{
+    position: absolute;
+    bottom: 0px;
+    /* left: 10px; */
+    color: var(--color-texto-white);
+    background-color: var(--color-primario);
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    /* padding: 5px 10px; */
+    border-radius: 0 0 20px 20px;
+    font-size: 0.875rem;
+    padding: 15px 0;
+    opacity: 0.8;
 }
 
 /* ------------------------fin Carta de Productos ------------------- */
@@ -397,16 +430,11 @@ section > h2{
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-.Gel > h4{
-    text-align: center;
-    margin-top: 10px;
-    color: var(--color-texto-white);
-    background-color: var(--color-primario);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 600;
+.GaleriaFlex .Gel:nth-child(1) img,
+.GaleriaFlex .Gel:nth-child(4) img,
+.GaleriaFlex .Gel:nth-child(5) img,
+.GaleriaFlex .Gel:nth-child(8) img {
+    filter: brightness(0.6);
 }
 
 
