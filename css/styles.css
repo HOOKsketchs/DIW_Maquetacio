@@ -179,6 +179,7 @@ nav a:hover{
     align-items: flex-start;
     text-align: left;
     padding: 40px;
+    animation: Desteñidodetitulo 1s ease-out;
 }
 
 section{
@@ -628,3 +629,18 @@ button[type="submit"] {
         width: 100%;
     }
 }
+/* ------------------------- animaciones css ---------------------------*/
+
+/* aqui para poder poner la animación del titulo con opacity y que tenga una transisión de arriba a abajo*/
+
+@keyframes Desteñidodetitulo {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
