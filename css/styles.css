@@ -442,6 +442,71 @@ section > h2{
 
 /* ------------------------ Fin Galería de Imágenes ------------------- */
 
+.video-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.video-wrapper {
+    width: min(100%, 900px);
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    max-height: 80vh;
+}
+
+.video-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(5px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-sizing: border-box;
+}
+
+.video-btn {
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.video-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: var(--color-secundario-hover);
+}
+
+.video-btn.active {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.video-btn .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 40;
+    font-size: 1.8rem;
+}
+
 /* ------------------------ Formulario de Reservas ------------------- */
 .Formulario{
     width: 100%;
@@ -637,22 +702,22 @@ button[type="submit"] {
     0% {
         opacity: 0;
         transform: translateY(0);
-        color: var(--co);
+        color: var(--color-secundario);
     }
     25% {
         opacity: 0.5;
         transform: translateY(-10px);
-        color: orange;
+        color: var(--color-secundario);
     }
     50% {
         opacity: 1;
         transform: translateY(-20px);
-        color: orange;
+        color: var(--color-secundario);
     }
     100% {
         opacity: 1;
         transform: translateY(-20px);
-        color: white;
+        color: var(--color-texto-white);
     }
 }
 
