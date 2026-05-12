@@ -316,6 +316,7 @@ section > h2{
     border-radius: 30px;
     color: var(--color-secundario);
     display: flex;
+    padding: 10px 15px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -390,7 +391,7 @@ section > h2{
     /* padding: 5px 10px; */
     border-radius: 0 0 20px 20px;
     font-size: 0.875rem;
-    padding: 15px 0;
+    line-height: 50px;
     opacity: 0.8;
 }
 
@@ -484,7 +485,7 @@ input, select, textarea{
     box-shadow: var(--box-shadow);
 }
 
-textarea {
+.textarea {
     min-height: 120px;
 }
 
@@ -540,6 +541,94 @@ button[type="submit"] {
 }
 /* ------------------------ Fin Botón Flotante ------------------- */
 
+/* ------------------------ responsive ------------------- */
+
+@media (max-width: 768px) {
+
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }  
+    
+    ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .CartaGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "Carta_item1"
+                            "Carta_item2"
+                            "Carta_item3"
+                            "Carta_item4"
+                            "Carta_item5";
+    }
+
+    .col2570 {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .contimg {
+        width: 27%;
+        order: 1;
+    }
+        .conttexto {
+            width: 70%;
+            order: 2;
+        }
+
+
+
+    .contimg, .conttexto {
+        width: 100%;
+    }
+
+    .GaleriaFlex .Gel {
+        width: 45%;
+    }
+
+    .Contimg2 {
+    aspect-ratio: 16/9; /* Mantiene proporción 16:9 para evitar distorsión */
+    height: auto;
+    }
+
+.overlaygrid {
+    height: 20%; /* Aumenta ligeramente el overlay para mejor legibilidad */
+    line-height: 35px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .Contimg2 {
+    aspect-ratio: 4/3; /* Proporción más cuadrada para móviles */
+    height: auto;
+}
+
+.overlaygrid {
+    height: 25%; /* Más alto en móviles para que el texto sea visible */
+    font-size: 0.8rem; /* Reduce tamaño de fuente si es necesario */
+    line-height: 35px;
+}
+   .SubEl:nth-child(3) .Contimg2 {
+        width: 100%;
+    }
+    .GaleriaFlex .Gel {
+        width: 100%;
+    }
+
+    .Formulario .col50 {
+        width: 100%;
+    }
+
+     .Formulario .col100 {
+        width: 100%;
+    }
+}
 /* ------------------------- animaciones css ---------------------------*/
 
 /* aqui para poder poner la animación del titulo con opacity y que tenga una transisión de arriba a abajo*/
