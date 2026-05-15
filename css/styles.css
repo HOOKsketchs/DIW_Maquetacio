@@ -431,18 +431,7 @@ section > h2{
     width: 22%;
     border-radius: 20px;
     height: auto;
-    /* background-color: lightgreen; */
-   
-}
-
-/* Animación de zoom */
-@keyframes zoomEffect {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.15);
-    }
+    overflow: hidden;
 }
 
 .Gel > img{
@@ -454,21 +443,21 @@ section > h2{
     padding: 5px;
     box-shadow: var(--box-shadow);
     position: relative;
-    transition: all 0.3s ease;
+    transform-origin: center center;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .Gel > img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-    animation: zoomEffect 0.3s ease forwards;
+    transform: scale(1.08) rotate(2deg);
     filter: grayscale(100%);
 }
 
-.GaleriaFlex .Gel:nth-child(1) img,
-.GaleriaFlex .Gel:nth-child(4) img,
-.GaleriaFlex .Gel:nth-child(5) img,
-.GaleriaFlex .Gel:nth-child(8) img {
-    filter: brightness(0.6);
+.GaleriaFlex .Gel:nth-child(1) img:hover,
+.GaleriaFlex .Gel:nth-child(4) img:hover,
+.GaleriaFlex .Gel:nth-child(5) img:hover,
+.GaleriaFlex .Gel:nth-child(8) img:hover {
+    filter: grayscale(100%) brightness(0.6);
 }
 
 
